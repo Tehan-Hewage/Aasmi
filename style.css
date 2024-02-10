@@ -1,0 +1,66 @@
+body{
+    background: #f5a2e9;
+}
+#ans{
+    display: none;
+}
+
+.header{
+    text-align: center;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 50px;
+}
+
+.gif{
+
+    display: flex;
+    justify-content: center;
+
+    
+}
+
+img{
+    margin-top: -30px;
+    height: 400px;
+    width: 400px;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    
+}
+
+.btn{
+    background-color: #ba30a6;
+    color: #000;
+    font-family: "Lucida Console", "Courier New", monospace;
+    display: inline-block;
+    text-align: center;
+    padding: 15px 32px;
+    cursor: pointer;
+    font-size: 18px;
+    border: none;
+    border-radius: 15px;
+    margin: 4px 2x;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color:  #b543a5;
+}
+
+#nobtn {
+    position: absolute;
+    margin-left: 150px;
+    transition: 0.5s;
+}
+
+#yesbtn {
+    position: absolute;
+    margin-right: 150px;
+    transition: 0.5s;
+}

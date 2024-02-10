@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon"  sizes="16x16" href="image/logo.png">
+    <meta property="og:image" content="https://aasmi.netlify.app/image/logo.png" />
+    <title><3</title>
+</head>
+<body>
+    <div id="ask" >
+        <div>
+            <h1 class="header">Do You Love Me :)</h1>
+        </div>
+        <div class="gif">
+            <img src="image\ask.gif" alt="Cute Image">
+        </div>
+        <div class="buttons">
+            <button class="btn" id="yesbtn" onclick="next()">Yes</button>
+            <button class="btn" id="nobtn" onclick="textchange()">No</button>
+        </div>
+    </div>
+    <div id="ans" >
+        <div>
+            <h1 class="header">Yippeeeee</h1>
+        </div>
+        <div class="gif">
+            <img src="image\ans.gif" alt="Cute Image">
+        </div>
+    </div>
+
+    <script>
+        function next(){
+            document.getElementById('ans').style.display='block';
+            document.getElementById('ask').style.display='none';
+            setTimeout(function(){
+                window.location.href= "https://api.whatsapp.com/send?phone=94769783889&text=I%20Clicked%20Yes%20%F0%9F%A5%B9%E2%9D%A4%EF%B8%8F%E2%80%8D%F0%9F%94%A5";
+
+            },3000);
+        }
+
+        var no = ["Why No :(", "Are You Sure ?","Really Sure ?","Are u Positive ?","Please Tell Yes :)","I will be Sad if you say No","I'll be very very very very Sad"];
+        var count = 0;
+        var newmargin = 150;
+        var mar_inc = 10;
+        function textchange(){
+            var text = document.getElementById('nobtn');
+            newmargin = newmargin+mar_inc;
+          //  text.style.marginLeft = newmargin + 'px';
+            text.textContent = no[count];
+            count = count + 1;
+            mar_inc = mar_inc + 10
+            if (count == 7){
+                count = 0;
+                newmargin = 150;
+                mar_inc = 10;
+            }
+        }
+    </script>
+</body>
+</html>
